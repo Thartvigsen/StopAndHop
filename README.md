@@ -7,7 +7,14 @@ This repository includes all necessary components to replicate our experiments a
 We provide two examples for using Stop&Hop:
 
 ### Pretrained Embeddings
-First, we provide dataloaders from an RNN pretrained on the physionet dataset, which can be found in `pretrained_example.py`
+First, we provide dataloaders from an RNN pretrained on the physionet dataset, which can be found in `pretrained_example.py`.
+To run this example, you can create a virtual environment from our requirements.txt file:
+
+```
+python3 -m venv stophop_venv
+
+source stophop_venv/bin/activate
+```
 
 ### Joint Learning for RNN and HaltingPolicy
 Second, we provide access to our ExtraSensory datasets, which can be run using `example.py`.
