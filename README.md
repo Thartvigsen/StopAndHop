@@ -19,6 +19,9 @@ source stophop_venv/bin/activate
 ### Joint Learning for RNN and HaltingPolicy
 Second, we provide access to our ExtraSensory datasets, which can be run using `example.py`.
 
+### Download our data
+You can download our data [here](https://drive.google.com/drive/folders/1o-w5-xWFIvxCiIK9F1AN4JQMRrg2Mi-i?usp=sharing), and put them into a directory called `data`.
+
 #### Citation
 Please use the following to cite this work:
 ```
