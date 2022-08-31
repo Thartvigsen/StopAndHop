@@ -1,5 +1,5 @@
-from ..src.model import StopAndHop
-from ..src.utils import computeAUC
+from .src.model import StopAndHop
+from .src.utils import computeAUC
 import torch
 import numpy as np
 
@@ -24,8 +24,8 @@ if __name__ == "__main__":
     np.random.seed(42)
 
     # --- load precomputed prefix embeddings ---
-    prefix_embeddings_train = torch.load("./loaders/physionet_grud_train_loader.pt")
-    prefix_embeddings_test = torch.load("./loaders/physionet_grud_test_loader.pt")
+    prefix_embeddings_train = torch.load("./physionet_grud_train_loader.pt")
+    prefix_embeddings_test = torch.load("./physionet_grud_test_loader.pt")
         
     # --- initialize Stop&Hop model and optimizers ---
     model = StopAndHop(model_config, data_config, lam=0.0) # Try increasing lam to encourage earlier predictions!
