@@ -3,6 +3,19 @@ from torch.utils import data
 import numpy as np
 import os
 
+class HiddenStateDataset(data.Dataset):
+    def __init__(self):
+        super(HiddenStateDataset, self).__init__()
+        
+    def __getitem__(self, ix):
+        return [self.hidden_states[:, ix, :], self.logits[:, ix, :], self.times[ix]], self.labels[ix]
+        
+    def create_data(self, hidden_states, logits, labels, times):
+        self.hidden_states = hidden_states
+        self.logits = logits
+        self.times = times
+        self.labels = labels
+
 class ExtraSensory(data.Dataset):
     def __init__(self, path_to_data):
         """
