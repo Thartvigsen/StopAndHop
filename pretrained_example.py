@@ -1,5 +1,6 @@
 from .src.model import StopAndHop
 from .src.utils import computeAUC
+from .src.dataset import HiddenStateDataset
 import torch
 import numpy as np
 
